@@ -4,5 +4,8 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /flights/book/
+Disallow: /flights/booking
+Disallow: /flights/staff
 
 Sitemap: https://www.protoursandtravelsolutions.com/sitemap.xml

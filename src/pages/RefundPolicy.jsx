@@ -7,7 +7,7 @@ export default function RefundPolicy() {
     <LegalLayout
       eyebrow="Legal"
       title="Cancellation & Refund Policy"
-      updated="30 September 2026"
+      updated="17 October 2026"
       intro="What happens to your money if you cancel, or if a supplier cancels on you. Before you pay, we always tell you in writing which parts of your booking are refundable and which are not."
     >
       <LegalSection title="1. How this policy works">
@@ -28,6 +28,8 @@ export default function RefundPolicy() {
             'Your refund is the amount the airline returns, minus our service fee. Unused airport taxes are refunded wherever the airline returns them — including on non-refundable fares.',
             'If the airline cancels or significantly reschedules your flight, you can choose the airline’s alternative flight or a refund as the airline offers. We do not charge a service fee on refunds for airline-cancelled flights.',
             'No-shows are usually treated as fully non-refundable by airlines, apart from any taxes the airline returns.',
+            'Flights booked online can be cancelled from your booking page; the airline’s cancellation charge and an estimated refund are shown before you confirm. Paid seats, meals and extra baggage are usually non-refundable.',
+            'If we cannot issue your ticket after you have paid — for example the airline sold out or raised the price — you get a full refund, including our service fee, unless you choose to rebook.',
           ]}
         />
       </LegalSection>
@@ -141,7 +143,8 @@ export default function RefundPolicy() {
 
       <LegalSection title="10. How to cancel or ask for a refund">
         <p>
-          Send your booking name, reference and travel dates by{' '}
+          Flights booked online: open the link from your booking confirmation and choose “Cancel flights”.
+          Everything else: send your booking name, reference and travel dates by{' '}
           <a href={waLink(`Hello ${BIZ.name}, I would like to cancel / request a refund for my booking.`)} className={a} target="_blank" rel="noopener noreferrer">WhatsApp</a>{' '}
           or email to <a href={`mailto:${BIZ.email2}`} className={a}>{BIZ.email2}</a>. We will confirm we have
           received it, and send the refund breakdown before anything is deducted.

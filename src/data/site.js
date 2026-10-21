@@ -56,6 +56,7 @@ export const waLink = (msg) =>
 /* ---- Navigation — About deliberately sits LAST, after Contact ---- */
 export const NAV = [
   { to: '/', label: 'Home' },
+  { to: '/flights', label: 'Book flights' },
   { to: '/services', label: 'Services' },
   { to: '/packages', label: 'Packages' },
   { to: '/flights-hotels', label: 'Flights & Hotels' },

@@ -7,7 +7,7 @@ export default function Privacy() {
     <LegalLayout
       eyebrow="Legal"
       title="Privacy Policy"
-      updated="30 September 2026"
+      updated="17 October 2026"
       intro="This notice tells you, in plain words, what personal data we collect, why, who we share it with, how long we keep it, and how you can see, correct or delete it — or complain if you are unhappy."
     >
       <LegalSection title="1. Who we are">
@@ -18,8 +18,8 @@ export default function Privacy() {
           where it applies). You are the <strong>Data Principal</strong>.
         </p>
         <p>
-          This policy covers this website (www.protoursandtravelsolutions.com), enquiries you send us on
-          WhatsApp, phone or email, and bookings made at our office.
+          This policy covers this website (www.protoursandtravelsolutions.com), including flights booked online
+          on it, enquiries you send us on WhatsApp, phone or email, and bookings made at our office.
         </p>
       </LegalSection>
 
@@ -27,6 +27,7 @@ export default function Privacy() {
         <LegalList
           items={[
             'This website has no account sign-up and does not save what you type into our enquiry form. Pressing “send” opens WhatsApp with your message pre-filled; nothing is sent until you press send in WhatsApp.',
+            'When you book a flight online, we store the traveller and contact details the airline needs, plus the booking and payment records, so we can issue, change, cancel and refund your tickets (sections 3 and 7).',
             'We only ask for what we need to quote and book your trip, and we only share it with the airline, hotel, embassy or other supplier that needs it.',
             'We do not sell your data, and we do not use it for advertising profiles.',
             'You can ask to see, correct or delete your data, or withdraw consent, at any time by writing to our Grievance Officer (section 11).',
@@ -44,6 +45,7 @@ export default function Privacy() {
             ['Passport details (name, number, nationality, date of birth, expiry), passport-size photos', 'Airlines, hotels abroad and embassies require them to issue tickets, vouchers and visas.', 'Only once you decide to book'],
             ['Visa documents — bank statements, salary slips, income-tax returns, employment or business proof, invitation letters, previous visas and travel history', 'Embassies and visa centres ask for these to decide your application. We pass them on; we do not assess them.', 'Only for visa applications'],
             ['Documents for passport assistance — address and date-of-birth proof, Aadhaar or other ID you choose to share', 'To help you fill and file your Passport Seva application correctly.', 'Only for passport help'],
+            ['Online flight bookings — traveller names, gender, dates of birth, nationality; passport and PAN details only when the airline requires them; email, mobile number and address; GST details if you choose to give them; seat, meal and baggage choices', 'To book, ticket, change or cancel your flights with the airlines through our airline booking partner, and to send you your e-ticket and updates.', 'When you book a flight online'],
             ['Health or special-assistance information (e.g. wheelchair, meal needs, medical conditions, vaccination certificates)', 'Only when you tell us, so the airline, hotel or pilgrimage authority can accommodate you or meet entry rules.', 'Only if you share it'],
             ['Payment records — amount, date, method, transaction or UTR reference, invoice details (and GSTIN, if you want a GST invoice)', 'To confirm your payment, issue invoices and refunds, and keep the accounts the law requires.', 'When you pay'],
             ['Emergency contact (optional)', 'To reach someone if something goes wrong while you travel.', 'Only if you give it'],
@@ -92,6 +94,8 @@ export default function Privacy() {
         <LegalList
           items={[
             'Airlines and airline booking systems (GDS), hotels, transport and local tour operators for your trip.',
+            'Our airline booking partner TBO (Tek Travels Private Limited), whose systems pass your flight booking to the airline.',
+            'The companies that host this website and store online booking records for us (Vercel and Neon), under contract and only to run the service.',
             'Embassies, consulates, visa application centres (e.g. VFS Global, BLS International) and online visa portals; Passport Seva for passport services.',
             'For Umrah and Hajj: the Saudi authorities and platforms (such as Nusuk), and the licensed operators in Saudi Arabia who provide your visa, hotel and transport; for Hajj, also the Government of India / Haj Committee processes that apply.',
             'Travel insurers, if you ask us to arrange insurance.',
@@ -111,6 +115,7 @@ export default function Privacy() {
           items={[
             'Enquiries that do not become a booking: deleted from our systems within 12 months of our last conversation, unless you ask us to keep them.',
             'Passport scans, photos and visa supporting documents: deleted within 90 days of your trip ending or your application being decided, unless you ask us to keep them for a future application.',
+            'Passport and PAN numbers given for an online flight booking: removed from our booking system automatically 90 days after the trip ends. Technical records of our messages with the airline booking system are deleted after 180 days.',
             'Invoices, payment and booking records: kept for 8 years, as Indian tax and accounting laws (such as the Income-tax Act and GST law) require.',
             'Where a complaint, refund claim or legal dispute is open, we keep the related records until it is resolved.',
           ]}

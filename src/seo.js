@@ -21,6 +21,7 @@ export const ROUTES = {
   '/': ['Pro Tours & Travel Solutions | Travel Agency in Bengaluru', 'A Bengaluru travel agency since 2009 and IATA-accredited agent: flights, hotels, visas, passports, tour packages, Hajj & Umrah, and visa & insurance consultancy. Hospital Road, Shivaji Nagar.', 'Home'],
   '/services': ['Travel Services in Bengaluru: Flights, Hotels, Visas | Pro Tours', 'Flight and hotel booking, tailor-made and group tours, visa and passport consultancy, and Umrah, handled by one desk in Shivaji Nagar, Bengaluru.', 'Services'],
   '/packages': ['Tour Packages from Bengaluru: Dubai, Bali, Maldives | Pro Tours', 'Economy, Deluxe and Premium holiday packages from Bengaluru with inclusions and exclusions listed. Dubai, Maldives, Bali, Europe, Kerala, Kashmir and more.', 'Tour packages'],
+  '/flights': ['Book Flights Online from Bengaluru | Pro Tours', 'Live fares on IndiGo, Air India, Akasa, Emirates, Qatar and more. Pick seats, meals and baggage, pay securely and get your e-ticket instantly.', 'Book flights'],
   '/flights-hotels': ['Flight & Hotel Booking in Bengaluru | Pro Tours', 'Domestic and international air tickets and hotel bookings from Bengaluru, with fare rules explained and confirmed vouchers before you travel.', 'Flights & hotels'],
   '/umrah': ['Umrah Packages from Bengaluru | Pro Tours Hajj & Umrah', 'Umrah visa, flights and hotels near the Haram from Bengaluru, with walking distances quoted in metres, group co-ordinators and Ziyarat tours.', 'Hajj & Umrah'],
   '/visa': ['Visa Assistance in Bengaluru for Indian Passports | Pro Tours', 'Search visa rules for Indian passport holders and get your file checked before it goes in. Passport fresh, renewal and tatkal help in Bengaluru.', 'Visa & passport'],
@@ -34,7 +35,10 @@ export const ROUTES = {
 
 export const NOT_FOUND = ['Page not found | Pro Tours & Travel Solutions', 'This page does not exist. Find flights, holidays, visas and Umrah from our Bengaluru travel desk.']
 
-export const metaFor = (path) => ROUTES[path] || NOT_FOUND
+/* Booking pages under /flights/… are private (noindex) but still get a sensible tab title. */
+const FLIGHT_PRIVATE = ['Your flight booking | Pro Tours & Travel Solutions', 'Complete or manage your flight booking with Pro Tours & Travel Solutions, Bengaluru.']
+
+export const metaFor = (path) => ROUTES[path] || (path.startsWith('/flights/') ? FLIGHT_PRIVATE : NOT_FOUND)
 export const canonicalFor = (path) => `${SITE}${path === '/' ? '/' : path}`
 
 /* ---------- Structured data ---------- */

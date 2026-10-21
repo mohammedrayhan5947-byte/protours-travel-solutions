@@ -20,8 +20,3 @@ export function loadRazorpayCheckout() {
 
   return loadPromise
 }
-
-/** '₹42,900' -> 42900 */
-export function priceToRupees(price) {
-  return Number(String(price).replace(/[^0-9]/g, ''))
-}

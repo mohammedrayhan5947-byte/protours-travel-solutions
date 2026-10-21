@@ -24,6 +24,10 @@ const Privacy       = lazy(() => import('./pages/Privacy.jsx'))
 const RefundPolicy  = lazy(() => import('./pages/RefundPolicy.jsx'))
 const Disclaimer    = lazy(() => import('./pages/Disclaimer.jsx'))
 const NotFound      = lazy(() => import('./pages/NotFound.jsx'))
+const FlightSearch  = lazy(() => import('./pages/flights/Search.jsx'))
+const FlightBook    = lazy(() => import('./pages/flights/Book.jsx'))
+const FlightManage  = lazy(() => import('./pages/flights/Manage.jsx'))
+const FlightStaff   = lazy(() => import('./pages/flights/Staff.jsx'))
 
 /** True while scripts/prerender.mjs renders pages to static HTML in Node. */
 const SSR = typeof window === 'undefined'
@@ -103,6 +107,11 @@ export default function App() {
             <Route path="/services"       element={<Page><Services /></Page>} />
             <Route path="/packages"       element={<Page><Packages /></Page>} />
             <Route path="/flights-hotels" element={<Page><FlightsHotels /></Page>} />
+            <Route path="/flights"        element={<Page><FlightSearch /></Page>} />
+            <Route path="/flights/book/:id" element={<Page><FlightBook /></Page>} />
+            <Route path="/flights/booking" element={<Page><FlightManage /></Page>} />
+            <Route path="/flights/booking/:ref" element={<Page><FlightManage /></Page>} />
+            <Route path="/flights/staff"  element={<Page><FlightStaff /></Page>} />
             <Route path="/umrah"          element={<Page><Umrah /></Page>} />
             <Route path="/visa"           element={<Page><Visa /></Page>} />
             <Route path="/contact"        element={<Page><Contact /></Page>} />

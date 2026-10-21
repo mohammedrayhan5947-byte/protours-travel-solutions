@@ -7,7 +7,7 @@ export default function Terms() {
     <LegalLayout
       eyebrow="Legal"
       title="Terms & Conditions"
-      updated="30 September 2026"
+      updated="17 October 2026"
       intro="The rules that apply when you use this website or book a trip with us. We have kept them short and plain — if anything is unclear, ask us before you book."
     >
       <LegalSection title="1. Who we are">
@@ -37,8 +37,10 @@ export default function Terms() {
 
       <LegalSection title="3. Quotes and prices">
         <p>
-          We don't publish prices on this website; every booking is quoted to you individually. Package
-          quotes are per person on twin sharing unless we say otherwise.
+          Tour packages, visas and most other services are quoted to you individually; package quotes are per
+          person on twin sharing unless we say otherwise. Flight fares in our online booking are live airline
+          prices for all the travellers searched, and include taxes, airline fees and our service fee — the
+          full amount is shown before you pay.
         </p>
         <LegalList
           items={[
@@ -53,15 +55,16 @@ export default function Terms() {
         <p>
           An enquiry or a quote is not a booking. A booking is confirmed only when we have received your
           payment (or the agreed deposit) and sent you a confirmation — an e-ticket, hotel voucher, visa
-          application receipt or written booking confirmation. Please check names, dates and details on it
-          straight away; names must match passports exactly, and airlines may charge for corrections.
+          application receipt or written booking confirmation. For flights booked online, that is when the
+          e-ticket number appears on your booking page. Please check names, dates and details straight away;
+          names must match passports exactly, and airlines may charge for corrections.
         </p>
       </LegalSection>
 
       <LegalSection title="5. Payments">
         <LegalList
           items={[
-            'You can pay by bank transfer, UPI, cash at our office, or — where we send you a payment link — online through Razorpay. The amount and method are always confirmed with you in writing first.',
+            'You can pay by bank transfer, UPI, cash at our office, or online through Razorpay — on our flight booking pages or by a payment link we send you. The amount is always shown or confirmed in writing before you pay.',
             'Online payments are processed by Razorpay, a PCI-DSS compliant payment gateway. We never see or store your card, UPI or net-banking credentials.',
             'Online charges are made in Indian Rupees. If you pay with a foreign card, your bank converts the amount and may add its own currency-conversion fee.',
             'Cash payments are accepted only within the limits set by Indian law, and you will always get a receipt.',
@@ -70,6 +73,18 @@ export default function Terms() {
         />
       </LegalSection>
 
+      <LegalSection title="5A. Flights booked online">
+        <LegalList
+          items={[
+            'Airlines hold a searched fare for about 15 minutes. If it expires before you pay, search again for the current price.',
+            'If the airline’s price goes up between your payment and ticketing, we will not charge you more without your agreement. We will contact you to rebook at the new price or refund you in full, including our service fee.',
+            'If a ticket cannot be issued after you have paid, our team contacts you as soon as possible, and within one working day, to rebook or refund you in full.',
+            'Seats, meals and extra baggage bought online are provided by the airline and are usually non-refundable. For full-service airlines, meal and seat choices are passed on as requests and are not guaranteed.',
+            'Our service fee is shown before you pay and is not refundable once the ticket is issued, except where the airline cancels the flight.',
+            'Anyone with your booking link can view and cancel the booking, so share it only with your co-travellers.',
+          ]}
+        />
+      </LegalSection>
       <LegalSection title="6. Passports, visas and travel documents">
         <LegalList
           items={[
@@ -103,7 +118,8 @@ export default function Terms() {
 
       <LegalSection title="9. Changes and cancellations">
         <p>
-          If you want to change or cancel, tell us in writing. Charges depend on the supplier’s rules and
+          If you want to change or cancel, tell us in writing, or cancel a flight booked online from your
+          booking page, where the airline’s charge is shown before you confirm. Charges depend on the supplier’s rules and
           our <Link to="/refund-policy" className={a}>Cancellation &amp; Refund Policy</Link>. If a supplier
           changes or cancels your booking, we will tell you promptly, offer the alternatives or refund the
           supplier gives, and help you claim any compensation you are entitled to.

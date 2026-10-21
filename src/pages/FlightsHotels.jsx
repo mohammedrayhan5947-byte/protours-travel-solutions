@@ -343,7 +343,11 @@ export default function FlightsHotels() {
         eyebrow="Flight & hotel booking"
         title="Air tickets and hotel rooms, booked by people you can call"
         sub="Flight booking and hotel reservations from our desk in Bengaluru: fares compared across airlines, rooms confirmed in writing, and the same people on WhatsApp if your plans change."
-      />
+      >
+        <Link to="/flights" className="btn btn-gold">
+          <Plane size={18} aria-hidden="true" className="rotate-45" /> Book flights online
+        </Link>
+      </PageHero>
 
       {/* ---------- Tell us your route ---------- */}
       <section aria-label="Where are you flying?" className="section paper overflow-x-clip bg-sand">
@@ -356,8 +360,9 @@ export default function FlightsHotels() {
             />
             <Reveal delay={0.1}>
               <p className="text-[1.08rem] text-pretty md:pb-2">
-                This isn’t a live fare search. Fill in the pass and it becomes a WhatsApp message to our desk;
-                we check the options and reply with fares. Nothing is booked until you say so.
+                Want to book yourself? <Link to="/flights" className="font-semibold text-brand-500 underline decoration-brand-500/30 underline-offset-4 hover:decoration-brand-500">Search live fares and book online</Link>,
+                seats and meals included. Prefer us to look? Fill in the pass and it becomes a WhatsApp message to our
+                desk; we reply with options. Nothing is booked until you say so.
               </p>
             </Reveal>
           </div>
